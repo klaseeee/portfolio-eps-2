@@ -526,7 +526,7 @@ body.light-theme {
 .skills__box {
     display: flex;
     justify-content: center;
-    column-gap: 2.5rem;
+    column-gap: 4rem;
 }
 
 .skills__group {
@@ -564,13 +564,13 @@ body.light-theme {
 
 .services__card {
     background-color: var(--container-color);
-    padding: 3rem 1.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem;
     border-radius: 1rem;
 }
 
 .services__title {
     font-size: var(--h3-font-size);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .services__button {
@@ -1114,17 +1114,21 @@ footer {
     }
 
     .skills__container {
-        grid-template-columns: repeat(2, 422px);
+        grid-template-columns: repeat(2, 448px);
         column-gap: 3rem;
     }
 
     .services__container {
-        grid-template-columns: repeat(3, 250px);
-        column-gap: 3rem;
+        grid-template-columns: repeat(3, 285px);
+        column-gap: 2rem;
     }
 
     .services__card {
-        padding: 5rem 2rem 1.5rem;
+        /* padding: 5rem 2rem 1.5rem; */
+    }
+
+    .service__img {
+        border-radius: 0.8rem;
     }
 
     .work__container {
