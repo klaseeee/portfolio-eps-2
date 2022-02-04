@@ -16,20 +16,27 @@ let modal = function(modalClick) {
     modalViews[modalClick].classList.add('active-modal');
 }
 
-
 modalBtns.forEach((mb, i) => {
     mb.addEventListener('click', ()=> {
         modal(i);
     })
 })
 
-modalClose.forEach((mc)=> {
-    mc.addEventListener('click', () => {
+document.addEventListener('click', function() {
+    if (event.target.matches('.services__modal-close') || !event.target.closest('.services__modal')) {
+        modalClose.forEach((mc)=> {
+            mc.addEventListener('click', () => {
+                modalViews.forEach((mv)=> {
+                    mv.classList.remove('active-modal')
+                })
+            })
+        })
+    } else {
         modalViews.forEach((mv)=> {
             mv.classList.remove('active-modal')
         })
-    })
-})
+    }
+});
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixer = mixitup('.work__container', {
@@ -81,12 +88,12 @@ function scrollActive(){
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id')
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
+        } else{
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
