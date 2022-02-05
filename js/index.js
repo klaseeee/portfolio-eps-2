@@ -130,6 +130,28 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+// picture turn on turn off
+const button = document.querySelector('#button')
+const img = document.querySelector('.about__img');
+
+const icon = 'bxs-sun'
+
+const select = localStorage.getItem('selected-icon')
+const current = () => button.classList.contains(icon) ? 'bx bxs-sun' : 'bx bx-sun'
+
+
+if(select) {
+	button.classList[select === 'bx bxs-sun' ? 'add' : 'remove'](icon)
+}
+
+button.addEventListener('click', () => {
+	img.classList.toggle('show');
+	button.classList.toggle(icon)
+
+	localStorage.setItem('selected-icon', current())
+})
+
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal ({
     origin: 'top',
