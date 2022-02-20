@@ -996,7 +996,13 @@ footer {
 }
 
 /* for medium devices */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 542px) {
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 2rem;
+    }
+
     .nav__menu {
         width: 328px;
         left: 0;
