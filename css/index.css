@@ -59,15 +59,15 @@
 
 /*========== responsive typography ==========*/
 @media screen and (min-width: 968px) {
-:root {
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-}
+    :root {
+        --biggest-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
 }
 
 /*=============== BASE ===============*/
@@ -299,6 +299,8 @@ body.light-theme {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
 .nav__link {
@@ -484,6 +486,8 @@ body.light-theme {
 #button {
     cursor: pointer;
     font-size: 1.2rem;
+    position: absolute;
+    bottom: -0.2rem;
 }
 
 .about__data {
@@ -598,6 +602,7 @@ body.light-theme {
     align-items: center;
     column-gap: .25rem;
     cursor: pointer;
+    user-select: none;
 }
 
 .services__button:hover .services__icon{
@@ -1035,7 +1040,7 @@ footer {
     }
 
     .work__img {
-        width: 295px ;
+        width: 250px ;
     }
 
     .contact__info {
@@ -1051,7 +1056,7 @@ footer {
 
 @media screen and (min-width: 767px) {
     .work__container {
-        grid-template-columns: repeat(2, max-content);
+        grid-template-columns: repeat(3, max-content);
     }
 
     .contact__container {
@@ -1166,7 +1171,7 @@ footer {
     }
 
     .testimonial__container {
-        width: 750px;
+        /* width: 750px; */
     }
 
     .testimonial__card {
