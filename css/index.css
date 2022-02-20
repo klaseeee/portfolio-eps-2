@@ -221,8 +221,7 @@ body.light-theme {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
     max-width: 968px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: 0 2rem;
 }
 
 .grid {
@@ -996,13 +995,7 @@ footer {
 }
 
 /* for medium devices */
-@media screen and (min-width: 542px) {
-    .container {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0 2rem;
-    }
-
+@media screen and (min-width: 576px) {
     .nav__menu {
         width: 328px;
         left: 0;
