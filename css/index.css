@@ -220,7 +220,8 @@ body.light-theme {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
     max-width: 968px;
-    padding: 0 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .grid {
@@ -264,7 +265,7 @@ body.light-theme {
     transition: .4s; /* for light mode animation*/
 }
 
-.nav {
+.nav-bar {
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
