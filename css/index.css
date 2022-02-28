@@ -93,7 +93,6 @@ textarea {
 body {
     background-color: var(--body-color);
     color: var(--text-color);
-    /*For animation dark mode*/
     transition: .4s;
 }
 
@@ -1090,7 +1089,7 @@ footer {
     }
 
     .home__img {
-        /* width: 220px; */
+        width: 220px;
     }
 
     .home__social-link{
@@ -1136,21 +1135,17 @@ footer {
     }
 
     .skills__container {
-        grid-template-columns: repeat(2, 448px);
+        grid-template-columns: repeat(2, 422px);
         column-gap: 3rem;
     }
 
     .services__container {
-        grid-template-columns: repeat(3, 285px);
-        column-gap: 2rem;
+        grid-template-columns: repeat(3, 250px);
+        column-gap: 3rem;
     }
 
     .services__card {
-        /* padding: 5rem 2rem 1.5rem; */
-    }
-
-    .service__img {
-        border-radius: 0.8rem;
+        padding: 5rem 2rem 1.5rem;
     }
 
     .work__container {
@@ -1170,7 +1165,7 @@ footer {
     }
 
     .testimonial__container {
-        /* width: 750px; */
+        width: 750px;
     }
 
     .testimonial__card {
