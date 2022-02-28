@@ -218,7 +218,7 @@ body.light-theme {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
+.wrap {
     max-width: 968px;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -1039,7 +1039,7 @@ footer {
     }
 
     .work__img {
-        width: 295px ;
+        width: 250px ;
     }
 
     .contact__info {
@@ -1067,7 +1067,7 @@ footer {
 
 /* for large devices */
 @media screen and (min-width: 992px) {
-    .container {
+    .wrap {
         margin-left: auto;
         margin-right: auto;
     }
