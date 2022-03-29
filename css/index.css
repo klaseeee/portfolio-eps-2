@@ -8,13 +8,14 @@
         blue: hsl(207, 90%, 72%)
         pink: hsl(356, 66%, 75%)
         blue: hsl(174, 63%, 62%)
+        orange: hsl(219, 100%, 64%), first-hue: 14
     */
 
     /*========== Colors ==========*/
-    --first-hue: 14;
-    --sat: 100%;
-    --light: 64%;
-    --second-hue: 219;
+    --first-hue: 250;
+    --sat: 90%;
+    --light: 72%;
+    --second-hue: 207;
     
     --first-color: hsl(var(--first-hue), var(--sat), var(--light));
     --first-color-alt: hsl(var(--first-hue), var(--sat), 60%);
@@ -447,6 +448,23 @@ body.light-theme {
     transition: .4s;
 }
 
+.button-torch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+#button2 {
+    flex-grow: 1;
+}
+
+.transparent {
+    background-color: transparent;
+    border: 2px solid var(--first-color);
+    color: var(--first-color);
+}
+
 .button:hover {
     background-color: var(--first-color-alt);
     color: var(--body-color);
@@ -464,8 +482,13 @@ body.light-theme {
 }
 
 .container__img {
-    justify-self: center;
-    position: relative;
+    /* justify-self: center;
+    position: relative; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 4rem;
 }
 
 .about__img {
@@ -474,6 +497,7 @@ body.light-theme {
     justify-self: center;
     opacity: .1;
     filter: grayscale(100%);
+    align-self: center;
 }
 
 .show {
@@ -484,9 +508,9 @@ body.light-theme {
 
 #button {
     cursor: pointer;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: -0.2rem;
+    font-size: 1.9rem;
+    /* position: absolute;
+    bottom: -0.2rem; */
 }
 
 .about__data {
@@ -517,7 +541,7 @@ body.light-theme {
 }
 
 .about__subtitle {
-    font-size: var(--tiny-font-size);
+    font-size: var(--smaller-font-size);
 }
 
 .about__description {
@@ -546,8 +570,8 @@ body.light-theme {
 
 .skills__box {
     display: flex;
-    justify-content: center;
-    column-gap: 4rem;
+    justify-content: space-around;
+    column-gap: 1rem;
 }
 
 .skills__group {
@@ -587,11 +611,18 @@ body.light-theme {
     background-color: var(--container-color);
     padding: 1.5rem 1.5rem 1.5rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .services__title {
     font-size: var(--h3-font-size);
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+}
+
+.service__img {
+    border-radius: 10px;
 }
 
 .services__button {
@@ -912,6 +943,7 @@ footer {
     display: flex;
     justify-content: center;
     column-gap: 1.25rem;
+    padding-left: 0;
 }
 
 .footer__social-link{
@@ -951,7 +983,11 @@ footer {
 
 /*=============== BREAKPOINTS ===============*/
 /* for small devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 390px) {
+    i#button {
+        display: none;
+    }
+
     .nav__menu {
         padding: 1rem 1.5rem;
     }
@@ -970,7 +1006,7 @@ footer {
     }
 
     .about__info {
-        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-columns: repeat(3, 1fr) ;
     }
 
     .skills__box {
@@ -1113,7 +1149,8 @@ footer {
     }
 
     .about__img {
-        width: 350px;
+        width: 290px;
+        /* align-self: center; */
     }
 
     .about__data {
@@ -1146,7 +1183,10 @@ footer {
     }
 
     .services__card {
-        padding: 5rem 2rem 1.5rem;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
     }
 
     .work__container {

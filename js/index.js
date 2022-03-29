@@ -131,7 +131,7 @@ themeButton.addEventListener('click', () => {
 })
 
 // picture turn on turn off
-const button = document.querySelector('#button')
+// const button = document.querySelector('#button')
 const img = document.querySelector('.about__img');
 
 const icon = 'bxs-sun'
@@ -144,13 +144,29 @@ if(select) {
 	button.classList[select === 'bx bxs-sun' ? 'add' : 'remove'](icon)
 }
 
-button.addEventListener('click', () => {
-	img.classList.toggle('show');
-	button.classList.toggle(icon)
+// button.addEventListener('click', () => {
+// 	img.classList.toggle('show');
+// 	button.classList.toggle(icon)
 
-	localStorage.setItem('selected-icon', current())
-})
+// 	localStorage.setItem('selected-icon', current())
+// })
 
+function toggleText() {
+    const button = document.querySelector('#button')
+    const button2 = document.getElementById("button2");
+    
+    if (button2.innerHTML === "Turn ON the light") {
+      button2.innerHTML = "Turn OFF the light"; 
+      button2.classList.remove("transparent");
+      button.classList.add(icon);
+      img.classList.add('show');
+    } else {
+      button2.innerHTML = "Turn ON the light";
+      button2.classList.add("transparent");
+      button.classList.remove(icon);
+      img.classList.remove('show');
+    }
+  }
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal ({
