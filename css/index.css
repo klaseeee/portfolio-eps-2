@@ -453,10 +453,12 @@ body.light-theme {
     align-items: center;
     gap: 1rem;
     padding: 0 1rem;
+    color: var(--first-color);
 }
 
 #button2 {
     flex-grow: 1;
+    font-size: var(--small-font-size);
 }
 
 .transparent {
